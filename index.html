@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Validar documento</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <img class="logo logo-top" src="assets/logo-arriba.png" alt="Logo superior">
+    </header>
+
+    <section class="intro">
+      <h1>Validar documento</h1>
+      <p>Ingrese los datos solicitados para verificar el documento.</p>
+    </section>
+
+    <section class="card" id="formCard">
+      <form id="validationForm">
+        <label for="rut">RUT</label>
+        <input id="rut" name="rut" type="text" autocomplete="off" placeholder="Ej: 12.345.678-9" required>
+
+        <label for="code">Código de verificación</label>
+        <input id="code" name="code" type="text" autocomplete="off" placeholder="Ingrese código" required>
+
+        <div class="captcha" id="captchaBox" role="checkbox" aria-checked="false" tabindex="0">
+          <div class="captcha-left">
+            <span class="check-box" id="checkBox"></span>
+            <span>No soy un robot</span>
+          </div>
+          <div class="captcha-mark">
+            <div class="captcha-circle">↻</div>
+            <small>Verificación</small>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button type="submit" class="btn btn-primary">Validar documento</button>
+          <button type="button" class="btn btn-light" id="clearButton">Limpiar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="result hidden" id="resultCard" aria-live="polite">
+      <div class="success-icon">✓</div>
+      <h2>Documento validado</h2>
+      <p class="result-text">La consulta se realizó correctamente.</p>
+
+      <div class="result-grid">
+        <div><span class="result-label">RUT</span><strong id="resultRut">—</strong></div>
+        <div><span class="result-label">Código</span><strong id="resultCode">—</strong></div>
+        <div><span class="result-label">Estado</span><strong>Válido</strong></div>
+      </div>
+
+
+      <a class="download-button" href="documento.pdf" download>
+        <svg class="download-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3v11m0 0-4-4m4 4 4-4M5 16v4h14v-4"
+                fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Descargar documento
+      </a>
+
+      <button type="button" class="btn btn-primary full" id="newValidation">Realizar otra consulta</button>
+    </section>
+
+    <footer class="footer">
+      <img class="logo logo-bottom" src="assets/logo-abajo.png" alt="Logo inferior">
+      <p id="footerName">Tu institución</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

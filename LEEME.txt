@@ -1,0 +1,32 @@
+SITIO MÓVIL PERSONALIZABLE
+
+ESTRUCTURA:
+index.html
+styles.css
+app.js
+assets/
+  logo-arriba.png
+  logo-abajo.png
+
+PARA CAMBIAR TUS LOGOS:
+1. Renombra tu logo superior como logo-arriba.png
+2. Renombra tu logo inferior como logo-abajo.png
+3. En GitHub entra a la carpeta assets
+4. Sube ambos archivos con esos nombres y reemplaza los existentes
+
+PARA CAMBIAR EL NOMBRE:
+Abre app.js y cambia:
+nombreInstitucion: "Tu institución"
+
+FUNCIONAMIENTO:
+- Ingresa RUT
+- Ingresa código
+- Marca "No soy un robot"
+- Presiona "Validar documento"
+- Muestra el RUT y código ingresados en la pantalla de resultado
+
+
+DESCARGAR DOCUMENTO
+- Sube tu PDF en la raíz del repositorio.
+- El archivo debe llamarse exactamente: documento.pdf
+- El botón "Descargar documento" aparecerá después de validar.
