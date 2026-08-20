@@ -1,0 +1,1 @@
+# segprivada.minsegpublica.gob.cl
